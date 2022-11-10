@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body class="text-center">
+    <main class="form-signin w-100 m-auto">
+      <h1 class="h3 mb-3 fw-normal">Welcome</h1>
+      <p>Login to your account</p>
+      <form action="/users" method="post">
+        <div class="form-floating">
+          <input class="form-control" type="text" name="user" placeholder="user" />
+          <label class="form-label" for="user">Identifiant</label>
+        </div>
+        <div class="form-floating">
+          <input class="form-control" type="email" name="email" placeholder="something@email.com" />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating">
+          <input class="form-control" type="password" name="password" placeholder="password" />
+          <label class="form-label" for="password">Mot de passe</label>
+        </div>
+        <input type="submit" class="btn btn-primary" />
+      </form>
+    </main>
+  </body>
+</html>
