@@ -18,6 +18,6 @@ router.post("/", (req, res, next) => {
     console.log("The solution is: ", rows[0].email);
   });
   db.end();
-  res.send(req.body);
+  res.send(rows);
 });
 module.exports = router;
