@@ -10,7 +10,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const db = require("./services/db");
 const app = express();
-
+console.log(db);
 db.connect();
 
 db.query("SELECT * FROM users", (err, rows, fields) => {

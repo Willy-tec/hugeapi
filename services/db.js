@@ -14,14 +14,14 @@ const connection = mysql.createConnection({
 //   password: "",
 //   database: "gdbr3085_hugeapi",
 // });
-connection.connect();
+// connection.connect();
 
-connection.query("SELECT * FROM users", (err, rows, fields) => {
-  if (err) throw err;
+// connection.query("SELECT * FROM users", (err, rows, fields) => {
+//   if (err) throw err;
 
-  console.log("The solution is: ", rows[0].name);
-});
+//   console.log("The solution is: ", rows[0].name);
+// });
 
-connection.end();
+// connection.end();
 
 module.exports = connection;
