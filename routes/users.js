@@ -16,9 +16,9 @@ router.post("/", (req, res, next) => {
 
     console.log("The solution is: ", rows[0].email);
     result = rows[0].email;
-    res.send("result:" + result);
   });
   db.end();
   console.log("The solution is: ", result);
+  res.send("result:" + result);
 });
 module.exports = router;
