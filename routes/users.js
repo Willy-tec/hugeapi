@@ -19,6 +19,6 @@ router.post("/", (req, res, next) => {
   // });
   // db.end();
   // console.log("The solution is: ", result);
-  res.send("result:" + result);
+  res.send("result:" + req.body);
 });
 module.exports = router;
