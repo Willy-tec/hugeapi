@@ -8,17 +8,8 @@ const MagicLinkStrat = require("passport-magic-link").Strategy;
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
-const db = require("./services/db");
 const app = express();
-console.log(db);
-db.connect();
 
-db.query("SELECT * FROM users", (err, rows, fields) => {
-  if (err) throw err;
-
-  console.log("The solution is: ", rows[0].email);
-});
-db.end();
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
