@@ -11,14 +11,11 @@ const usersRouter = require("./routes/users");
 const db = require("./services/db");
 const app = express();
 
-db.connect();
 db.query("SELECT * FROM users AS user", (err, rows, fields) => {
   if (err) throw err;
 
   console.log("The solution is: ", rows[0].user);
 });
-
-db.end();
 
 app.use(logger("dev"));
 app.use(express.json());
