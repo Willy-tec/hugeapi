@@ -17,6 +17,9 @@ async function sendMail(userName, user) {
     text: "Bienvenue " + userName + " sur hugeapi, le site qui vous apifie la gueule", // plain text body
     html: "<h1>Bienvenue " + userName + "  sur hugeapi,</h1> <p>le site qui vous apifie la gueule</p>", // html body
   });
+  console.log("Message sent: %s", info.messageId);
+
+  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 }
 
 module.exports = sendMail;
