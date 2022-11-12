@@ -7,18 +7,18 @@ const db = require("../services/db");
 router.get("/", (req, res, next) => {
   res.send(req.params);
 });
-router.post("/", async (req, res, next) => {
+router.post("/", (req, res, next) => {
   mailer(req.body.user, req.body.email);
-  console.log(db);
   db.connect();
   let result;
-  await db.query("SELECT * FROM users", (err, rows, fields) => {
+  db.query("SELECT * FROM users", (err, rows, fields) => {
     if (err) throw err;
 
     console.log("The solution is: ", rows[0].email);
     result = rows[0].email;
+    res.send("result:" + result);
   });
   db.end();
-  res.send(result);
+  console.log("The solution is: ", result);
 });
 module.exports = router;
