@@ -16,7 +16,7 @@ router.post("/", (req, res, next) => {
     if (err) throw err;
 
     console.log("The solution is: ", rows[0].email);
-    result = rows;
+    result = rows[0].email;
   });
   db.end();
   res.send(result);
