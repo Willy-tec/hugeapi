@@ -27,6 +27,8 @@ const mariadb = require("mariadb");
 
 const init = (req, res) => {
   let result;
+  console.log("test");
+  console.log(process.env);
   const pool = mariadb.createPool({
     host: "localhost",
     user: process.env.mariadb_user,
