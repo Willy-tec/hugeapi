@@ -1,7 +1,7 @@
-let express = require("express");
-let router = express.Router();
-let mailer = require("../services/mailer");
-// const db = require("../services/db");
+const express = require("express");
+const router = express.Router();
+const mailer = require("../services/mailer");
+const db = require("../services/db");
 
 /* GET users listing. */
 router.get("/", (req, res, next) => {
@@ -9,16 +9,6 @@ router.get("/", (req, res, next) => {
 });
 router.post("/", (req, res, next) => {
   mailer(req.body.user, req.body.email);
-  // db.connect();
-  // let result;
-  // db.query("SELECT * FROM users", (err, rows, fields) => {
-  //   if (err) throw err;
-
-  //   console.log("The solution is: ", rows[0].email);
-  //   result = rows[0].email;
-  // });
-  // db.end();
-  // console.log("The solution is: ", result);
-  res.send("result:" + req.body);
+  res.send(req.body);
 });
 module.exports = router;
