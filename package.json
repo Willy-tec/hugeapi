@@ -7,16 +7,16 @@
     "sass": "sass --watch public/stylesheets:public/stylesheets"
   },
   "dependencies": {
-    "bootstrap": "5.2.2",
+    "bootstrap": "5.3.2",
     "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
+    "debug": "~4.3.4",
     "dotenv": "^16.0.3",
-    "express": "~4.16.1",
+    "express": "~4.18.2",
     "mariadb": "^3.0.2",
-    "morgan": "~1.9.1",
+    "morgan": "~1.10.0",
     "mysql": "^2.18.1",
     "nodemailer": "^6.8.0",
-    "passport": "^0.6.0",
+    "passport": "^0.7.0",
     "passport-magic-link": "^2.1.0"
   }
 }
