@@ -40,7 +40,7 @@ const insertUser = (req, res) => {
   return pool
     .getConnection()
     .then((conn)=>{
-      return conn.query("INSERT INTO users value(?, ?, ?)", [req.name, req.mail, req.password])
+      return conn.query("INSERT INTO users value(?, ?, ?)", [req.user, req.email, req.password])
     })
     .then(res =>{
       conn.end()
